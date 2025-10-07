@@ -3,16 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <title>HexbinaryConvert</title>
+        <style>
+            body{
+                background-color: #f0f8ff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+            }
+            .tablet{
+                background: white;
+                max-width: 900px;
+                margin: auto;
+                padding: 25px 35px;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            }
+            .hex-input{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: rgb(0, 0, 0);
+                background-color: #ececdd;
+            }
+        </style>
     </head>
 
     <body>
         <h1 style="color: #4CAF50; font-family:
          'Arial', sans-serif; text-transform: 
          uppercase; letter-spacing: 2px; 
-         font-weight: bold;"
+         font-weight: bold; text-align: center;"
         >Hexbinary Convert</h1>
 
-        
+        <p class = "normal text"> You can convert hexadecimal numbers to binary and binary to hexadecimal.</p>
+
+      <div class="tablet">
+        <h2 style="color: #2196F3; font-family: 'Arial', sans-serif; text-align: center;">Hex to Binary</h2>
+        <hr>
+
+    <p class="normal text">Inter your hexadecimal number:</p>
+    <p>
+    <input class="hex-input" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" type="text"
+    id="hexInput" placeholder="Enter Hexadecimal Number">
+    </p>
+
+
+      </div>
 
     </body>
 </html>
