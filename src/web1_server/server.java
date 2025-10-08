@@ -25,7 +25,9 @@ public class Server {
                     <body>
                         <h1>Hello from my DIY Java Server!</h1>
                         <p>Current time: 
+                        
                     """ + new Date() + """
+                        
                         </p>
                     </body>
                     </html>
