@@ -47,6 +47,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Starting server...");
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext(SERVER_CONTEXT, new MyHandler());
         server.start();
