@@ -1,4 +1,5 @@
 package web1_server;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -13,7 +14,7 @@ public class Server {
     private static final String SERVER_CONTEXT = "/myapp";
 
     static class MyHandler implements HttpHandler {
-        @Override
+
         public void handle(HttpExchange exchange) throws IOException {
             String response = """
                     <!DOCTYPE html>
@@ -25,14 +26,18 @@ public class Server {
                     <body>
                         <h1>Hello from my DIY Java Server!</h1>
                         <p>Current time: 
-                        
+                    
                     """ + new Date() + """
-                        
+                    
                         </p>
                     </body>
                     </html>
                     """;
 
+            respond(exchange, response);
+        }
+
+        private static void respond(HttpExchange exchange, String response) throws IOException {
             byte[] bytes = response.getBytes();
             exchange.sendResponseHeaders(200, bytes.length);
             try (OutputStream os = exchange.getResponseBody()) {
@@ -47,4 +52,5 @@ public class Server {
         server.start();
         System.out.println("Server running at: http://localhost:8080" + SERVER_CONTEXT);
     }
+
 }
