@@ -1,0 +1,24 @@
+# Gradle build cache and state
+.gradle/
+
+# Build outputs
+build/
+**/build/
+out/
+
+# Java class files
+*.class
+
+# IDE configuration
+.idea/
+.vscode/
+*.iml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
