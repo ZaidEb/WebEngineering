@@ -1,24 +1,36 @@
-# Gradle build cache and state
-.gradle/
-
-# Build outputs
-build/
-**/build/
-out/
-
-# Java class files
-*.class
-
-# IDE configuration
-.idea/
-.vscode/
-*.iml
-
-# OS-generated files
+# ============================================
+# macOS system files
+# ============================================
 .DS_Store
 Thumbs.db
 
-# Logs and temporary files
+# ============================================
+# IDE-specific (IntelliJ / Eclipse)
+# ============================================
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+
+# ============================================
+# Gradle & Grails build artifacts
+# ============================================
+.gradle/
+build/
+target/
+out/
+logs/
 *.log
-*.tmp
+
+# Grails WAR / temp builds
+*.war
+
+# ============================================
+# System / environment files
+# ============================================
+.env
 *.swp
+*.swo
