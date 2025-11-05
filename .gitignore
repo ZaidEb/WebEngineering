@@ -34,3 +34,6 @@ logs/
 .env
 *.swp
 *.swo
+
+bin/
+
