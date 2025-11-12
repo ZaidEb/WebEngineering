@@ -18,6 +18,45 @@
 
     <body>
         
+<header id="siteNav" class="navbar show">
+  <!-- nav content -->
+    <nav>
+        <ul style="list-style-type:none; margin:0; padding:0; overflow:hidden; background-color:#333;">
+            <li style="float:left;"><a href="#home" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Home</a></li>
+            <li style="float:left;"><a href="#about" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">About</a></li>
+            <li style="float:left;"><a href="#contact" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Contact</a></li>
+        </ul>
+</header>
+
+<script>
+  const nav = document.getElementById('siteNav');
+  let lastY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+
+    if (currentY <= 0) {
+      nav.classList.add('show');
+      nav.classList.remove('hide');
+      lastY = currentY;
+      return;
+    }
+
+    if (currentY > lastY) {
+      nav.classList.add('hide');
+      nav.classList.remove('show');
+    } else {
+      nav.classList.add('show');
+      nav.classList.remove('hide');
+    }
+
+    lastY = currentY;
+  });
+</script>
+
+
+
+
         <section class ="hero">
             <div class= "hero_content">
                 <h1 style="font-family:'Times New Roman', serif; font-size:3em; text-align:center; color:#333;">
