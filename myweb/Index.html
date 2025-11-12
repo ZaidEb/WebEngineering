@@ -23,14 +23,15 @@
     <nav>
         <ul style="list-style:none; margin:0; padding:0; overflow:hidden;
            background:linear-gradient(to right,
-                                      #000000 0%,
-                                      #000000 35%,
-                                      #90afdf 65%,
-                                      #90afdf 100%);">
+                                      #c0d4de 0%,
+                                      #ffffff 35%,
+                                      #cbdbe1 65%,
+                                      #bec8d6 100%);">
 
-            <li style="float:right;"><a href="#home" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Home</a></li>
-            <li style="float:right;"><a href="#about" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">About</a></li>
-            <li style="float:right;"><a href="#contact" style="display:block; color:white; text-align:center; padding:14px 16px; text-decoration:none;">Contact</a></li>
+            <li style="float:right;"><a href="#home" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Home</a></li>
+            <li style="float:right;"><a href="#about" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Projects</a></li>
+            <li style="float:right;"><a href="#about" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Photography</a></li>
+            <li style="float:right;"><a href="#contact" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Contact</a></li>
             <li style="float:left; padding:8px 16px;">
                <img src="assets/img/logo.png" alt="Logo" style="height:32px; display:block;">
              </li>
@@ -38,43 +39,17 @@
     </nav>
 </header>
 
-<script>
-  const nav = document.getElementById('siteNav');
-  let lastY = window.scrollY;
-
-  window.addEventListener('scroll', () => {
-    const currentY = window.scrollY;
-
-    if (currentY <= 0) {
-      nav.classList.add('show');
-      nav.classList.remove('hide');
-      lastY = currentY;
-      return;
-    }
-
-    if (currentY > lastY) {
-      nav.classList.add('hide');
-      nav.classList.remove('show');
-    } else {
-      nav.classList.add('show');
-      nav.classList.remove('hide');
-    }
-
-    lastY = currentY;
-  });
-</script>
-
-
-
 
         <section class ="hero">
             <div class= "hero_content">
                 <h1 style="font-family:'Times New Roman', serif; font-size:3em; text-align:center; color:#333;">
-                    Welcome to My Web Page
+                    Zaid
                 </h1>
                 <p style="font-size:1.2em; text-align:center; color:#666;">
-                    This is a simple web page created to demonstrate HTML and CSS styling.
+                    Welcome to my personal web page!
                 </p>    
+                <p style="font-size:1em; text-align:center; color:#666;">
+                    I am a software developer with a passion for creating web applications.
             </div>
         </section>
         
