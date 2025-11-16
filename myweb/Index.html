@@ -1,78 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>My Web Page</title>
-         <link rel="stylesheet" href="style.css" />
-        <style>
-            body{
-                background-color: #ffffff;
-                font-family: 'Times New Roman', serif;
-                margin: 0;
-                padding: 20px;
-            }
-
-        </style>
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="style.css" />
+   
+</head>
 
 <body>
-        
-  <header id="siteNav" class="navbar show">
-  <!-- nav content -->
-    <nav>
-        <ul style="list-style:none; margin:0; padding:0; overflow:hidden;
-           background:linear-gradient(to right,
-                                      #c0d4de 0%,
-                                      #ffffff 35%,
-                                      #cbdbe1 65%,
-                                      #bec8d6 100%);">
 
-            <li style="float:right;"><a href="#home" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Home</a></li>
-            <li style="float:right;"><a href="#about" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Projects</a></li>
-            <li style="float:right;"><a href="#about" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Photography</a></li>
-            <li style="float:right;"><a href="#contact" style="display:block; color:rgb(0, 0, 0); text-align:center; padding:14px 16px; text-decoration:none;">Contact</a></li>
+<header id="siteNav" class="navbar show">
+    <nav>
+        <ul class="nav-list">
+
+            <li style="float:right;">
+                <a href="#home" style="display:block; color:#000; text-align:center; padding:14px 16px; text-decoration:none;">
+                    Home
+                </a>
+            </li>
+
+            <li style="float:right;">
+                <a href="#about" style="display:block; color:#000; text-align:center; padding:14px 16px; text-decoration:none;">
+                    Projects
+                </a>
+            </li>
+
+            <li style="float:right;">
+                <a href="#about" style="display:block; color:#000; text-align:center; padding:14px 16px; text-decoration:none;">
+                    Photography
+                </a>
+            </li>
+
+            <li style="float:right;">
+                <a href="#contact" style="display:block; color:#000; text-align:center; padding:14px 16px; text-decoration:none;">
+                    Contact
+                </a>
+            </li>
+
             <li style="float:left; padding:8px 16px;">
-               <img src="assets/img/logo.png" alt="Logo" style="height:32px; display:block;">
-             </li>
+                <img src="assets/img/logo.png" alt="Logo" style="height:32px; display:block;">
+            </li>
+
         </ul>
     </nav>
-  </header>
+</header>
 
+<section class="hero">
+    <div class="hero_content">
+        <h1 style="font-family:'Times New Roman', serif; font-size:3em; text-align:center; color:#333;">
+            <!-- Heading text here if needed -->
+        </h1>
 
-        <section class ="hero">
-            <div class= "hero_content">
-                <h1 style="font-family:'Times New Roman', serif; font-size:3em; text-align:center; color:#333;">
-                
-                </h1>
-                <p style="font-size:1.2em; text-align:center; color:#666;">
-                    Welcome to my personal web page!
-                </p>    
-                <p style="font-size:1em; text-align:center; color:#666;">
-                    I am a software developer with a passion for creating web applications.
-            </div>
-        </section>
-<section class="projects" id="projects">
-  <h2>School Projects</h2>
-  <div class="project-grid">
-    <article class="project-card">
-      <h3>Portfolio Site</h3>
-      <p>Responsive personal site built with HTML/CSS.</p>
-      <a href="http://127.0.0.1:3000/myweb/Index.html?serverWindowId=dd7589f3-0019-4bb7-a024-80c780cc9132"
-       target="_blank">View project</a>
-    </article>
+        <p style="font-size:1.2em; text-align:center; color:#666;">
+            Welcome to my personal web page!
+        </p>
 
-    <article class="project-card">
-      <h3>Weather App</h3>
-      <p>Java app using the OpenWeather API.</p>
-      <a href="https://github.com/you/weather-app" target="_blank">Source code</a>
-    </article>
-
-    <!-- add more cards as needed -->
-  </div>
+        <p style="font-size:1em; text-align:center; color:#666;">
+            I am a software developer with a passion for creating web applications.
+        </p>
+    </div>
 </section>
 
+<section class="projects" id="projects">
+    <h2>School Projects</h2>
+    <div class="project-grid">
 
-        
-        
+        <article class="project-card">
+            <h3>Portfolio Site</h3>
+            <p>Responsive personal site built with HTML/CSS.</p>
+            <a href="http://127.0.0.1:3000/myweb/Index.html"
+               target="_blank">View project</a>
+        </article>
+
+        <article class="project-card">
+            <h3>Weather App</h3>
+            <p>Java app using the OpenWeather API.</p>
+            <a href="https://github.com/you/weather-app" target="_blank">Source code</a>
+        </article>
+
+        <!-- Add more cards as needed -->
+
+    </div>
+</section>
+
 </body>
+</html>
