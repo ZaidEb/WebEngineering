@@ -28,3 +28,23 @@
   text-decoration: none;
   font-weight: 600;
 }
+
+ body {
+            background-color: #ffffff;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+        }
+.nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(to right,
+                                       #c0d4de 0%,
+                                       #ffffff 35%,
+                                       #cbdbe1 65%,
+                                       #bec8d6 100%);
+        }
+
+       
