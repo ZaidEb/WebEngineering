@@ -47,4 +47,39 @@
                                        #bec8d6 100%);
         }
 
-       
+       .nav-list .logo{
+        margin-right: auto;
+        padding: 8px 16px;
+        }
+
+        .site-logo {
+            height: 32px;
+            display: block;
+        }
+        .nav-link {
+            display: block;
+            color: #000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav-link:hover,
+.nav-link:focus {
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+/* responsive: stack menu on small screens */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nav-list .logo {
+        margin: 0;
+        text-align: center;
+    }
+    .nav-link {
+        padding: 12px;
+    }
+}
