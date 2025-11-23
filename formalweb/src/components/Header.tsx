@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 
-const languages = ["EN", "فارسی", "پښتو", "دری"];
+const languages = ["EN","دری"];
 
 export default function Header() {
   return (
