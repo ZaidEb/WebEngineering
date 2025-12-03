@@ -62,6 +62,10 @@
             const hexInput = document.getElementById("hexInput");
             const binaryOutput = document.getElementById("binaryOutput");
 
+            const binInput = document.getElementById("binInput");
+            const hexOutput = document.getElementById("hexOutput");
+
+
             hexInput.addEventListener("input", function () {
                 let hexValue = hexInput.value.trim().replace(/\s+/g, "");
 
@@ -71,7 +75,7 @@
                 }
 
                 if (hexValue === "") {
-                    binaryOutput.textContent = "--";
+                    binaryOutput.textContent = "-";
                     return;
                 }
 
@@ -79,7 +83,37 @@
 
                 binaryOutput.textContent = binary;
             });
+
+
         </script>
+
+        <hr>
+
+        <div class="tablet">
+            <h2 style="color: #37bb39; font-family: 'Arial', sans-serif; text-align: center;">Binary to Hex</h2>
+            <hr>
+
+            <p>Enter your binary number:</p>
+
+            <input id="binInput" type="text" class="hex-input"
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+                   placeholder="Enter Binary Number">
+
+            <br><br>
+
+            <p>Hex output:</p>
+
+            <div id="hexOutput" style="
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+        background-color: #f7f7f7;
+        font-family: Consolas, monospace;">
+                (empty)
+            </div>
+        </div>
+
 
     </body>
 </html>
