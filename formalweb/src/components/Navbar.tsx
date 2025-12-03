@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-center justify-between py-3 md:py-4">
           <p className="text-sm font-semibold text-slate-800 md:hidden">Menu</p>
-          <div className="hidden items-center gap-4 text-sm font-medium text-slate-700 md:flex">
+          <div className="hidden items-center gap-4 text-sm font-medium text-slate-700 md:flex md:ml-auto md:flex-row-reverse">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -45,12 +45,12 @@ export default function Navbar() {
         </div>
 
         {open && (
-          <div className="flex flex-col gap-2 border-t border-slate-200 py-3 text-sm font-medium text-slate-700 md:hidden">
+          <div className="flex flex-col items-end gap-2 border-t border-slate-200 py-3 text-sm font-medium text-slate-700 md:hidden">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded px-3 py-2 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
+                className="w-full text-right rounded px-3 py-2 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
