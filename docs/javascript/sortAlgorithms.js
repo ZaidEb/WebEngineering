@@ -1,5 +1,5 @@
 // -----------------------------
-// Sorting class
+// Sorting class"External code "
 // -----------------------------
 class Sorting {
 
@@ -44,6 +44,24 @@ class Sorting {
 
         return result.concat(left.slice(i)).concat(right.slice(j));
     }
+
+    // Bubble Sort
+    static bubbleSort(arr) {
+        let array = [...arr];
+        let n = array.length;
+        
+        for (let i = 0; i < n - 1; i++) {
+            for (let j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    // Swap elements
+                    let temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+        return array;
+    }
 }
 
 // ---------------------------------------------
@@ -79,6 +97,8 @@ function initSortingUI() {
             result = Sorting.mergeSort(arr);
         } else if (algorithmSelect.value === "quick") {
             result = Sorting.quickSort(arr);
+        } else if (algorithmSelect.value === "bubble") {
+            result = Sorting.bubbleSort(arr);
         }
 
         // Show the result
