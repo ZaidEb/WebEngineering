@@ -1,5 +1,5 @@
 // -----------------------------
-// Sorting class"External code "
+// Sorting class with step tracking for visualization
 // -----------------------------
 class Sorting {
 
