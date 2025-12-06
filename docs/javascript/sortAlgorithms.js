@@ -3,7 +3,7 @@
 // -----------------------------
 class Sorting {
 
-    // Quick Sort
+    // Quick Sort (basic version for result)
     static quickSort(arr) {
         if (arr.length <= 1) return arr;
 
@@ -19,7 +19,7 @@ class Sorting {
         return [...Sorting.quickSort(left), pivot, ...Sorting.quickSort(right)];
     }
 
-    // Merge Sort
+    // Merge Sort (basic version for result)
     static mergeSort(arr) {
         if (arr.length <= 1) return arr;
 
@@ -45,7 +45,7 @@ class Sorting {
         return result.concat(left.slice(i)).concat(right.slice(j));
     }
 
-    // Bubble Sort
+    // Bubble Sort (basic version for result)
     static bubbleSort(arr) {
         let array = [...arr];
         let n = array.length;
