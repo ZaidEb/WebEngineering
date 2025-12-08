@@ -343,6 +343,63 @@
     </div>
 </div>
 
+<script src="javascript/rekursion.js"></script>
+
+<!-- Rekursion Squares Section -->
+<div class="tablet">
+    <h2 style="color: #2196F3; text-align: center;">Rekursion Squares</h2>
+    <p style="text-align: center; color: #555;">Draws a square, then calls itself 4 times to draw smaller squares in each corner.</p>
+    <hr>
+
+    <p>Enter size (e.g. 200):</p>
+
+    <input class="text-input"
+           style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+           type="text" id="squaresInput" placeholder="e.g. 200">
+
+    <br><br>
+
+    <button id="squaresBtn" style="padding: 8px 16px; border-radius: 5px; border: none; background-color: #4CAF50; color: white;">
+        Start
+    </button>
+
+    <br><br>
+
+    <p>Output:</p>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <canvas id="squaresCanvas" width="400" height="400" style="
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            background-color: #f7f7f7;">
+        </canvas>
+        <pre style="
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 13px;
+            overflow: auto;
+            max-width: 400px;
+"><code>function drawSquares(left, top, size) {
+  if (size >= 16) {
+    // Draw square
+    ctx.fillStyle = "#ccc";
+    ctx.fillRect(left, top, size, size);
+    ctx.strokeStyle = "#000";
+    ctx.strokeRect(left, top, size, size);
+    
+    // Recursion (4 corners)
+    let s = size / 2 - margin;
+    drawSquares(left - s/2, top - s/2, s);
+    drawSquares(left + size - s/2, top - s/2, s);
+    drawSquares(left - s/2, top + size - s/2, s);
+    drawSquares(left + size - s/2, top + size - s/2, s);
+  }
+}</code></pre>
+    </div>
+</div>
+
+<script src="javascript/rekursionSquares.js"></script>
 
 </body>
 </html>
