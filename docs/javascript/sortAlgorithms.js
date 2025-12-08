@@ -444,6 +444,95 @@ function initSortingUI() {
             playVisualization();
         }
     });
+
+    // Pause button
+    pauseBtn.addEventListener("click", function() {
+        stopVisualization();
+    });
+
+    // Step button
+    stepBtn.addEventListener("click", function() {
+        stopVisualization();
+        if (visualizationState.currentStep < visualizationState.steps.length - 1) {
+            visualizationState.currentStep++;
+            renderStep(visualizationState.currentStep);
+        }
+    });
+
+    // Reset button
+    resetBtn.addEventListener("click", function() {
+        stopVisualization();
+        visualizationState.currentStep = 0;
+        renderStep(0);
+    });
+}
+
+function stopVisualization() {
+    visualizationState.isPlaying = false;
+    if (visualizationState.intervalId) {
+        clearInterval(visualizationState.intervalId);
+        visualizationState.intervalId = null;
+    }
+}
+
+function playVisualization() {
+    visualizationState.intervalId = setInterval(function() {
+        if (visualizationState.currentStep < visualizationState.steps.length - 1) {
+            visualizationState.currentStep++;
+            renderStep(visualizationState.currentStep);
+        } else {
+            stopVisualization();
+        }
+    }, visualizationState.speed);
+}
+
+function renderStep(stepIndex) {
+    const barsContainer = document.getElementById("barsContainer");
+    const stepInfo = document.getElementById("stepInfo");
+    
+    if (stepIndex >= visualizationState.steps.length) return;
+    
+    const step = visualizationState.steps[stepIndex];
+    const arr = step.array;
+    const maxVal = Math.max(...arr);
+    
+    // Clear container
+    barsContainer.innerHTML = "";
+    
+    // Create bars
+    arr.forEach((value, index) => {
+        const barWrapper = document.createElement("div");
+        barWrapper.className = "bar";
+        
+        const barFill = document.createElement("div");
+        barFill.className = "bar-fill";
+        
+        // Set height based on value (min 20px, max 180px)
+        const height = Math.max(20, (value / maxVal) * 160);
+        barFill.style.height = height + "px";
+        
+        // Apply colors based on state
+        if (step.pivot && step.pivot.includes(index)) {
+            barFill.classList.add("pivot");
+        } else if (step.swapping && step.swapping.includes(index)) {
+            barFill.classList.add("swapping");
+        } else if (step.comparing && step.comparing.includes(index)) {
+            barFill.classList.add("comparing");
+        } else if (step.sorted && step.sorted.includes(index)) {
+            barFill.classList.add("sorted");
+        }
+        
+        const label = document.createElement("div");
+        label.className = "bar-label";
+        label.textContent = value;
+        
+        barWrapper.appendChild(barFill);
+        barWrapper.appendChild(label);
+        barsContainer.appendChild(barWrapper);
+    });
+    
+    // Update step info
+    stepInfo.textContent = `Step ${stepIndex + 1}/${visualizationState.steps.length}: ${step.message}`;
 }
 
 // Initialize UI when page loads
