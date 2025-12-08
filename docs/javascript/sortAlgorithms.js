@@ -399,6 +399,13 @@ function initSortingUI() {
 
         if (arr.some(isNaN)) {
             sortOutput.textContent = "Invalid input! Use only numbers.";
+            visualizationContainer.style.display = "none";
+            return;
+        }
+
+        if (arr.length > 15) {
+            sortOutput.textContent = "Please use 15 or fewer numbers for visualization.";
+            visualizationContainer.style.display = "none";
             return;
         }
 
