@@ -410,14 +410,18 @@ function initSortingUI() {
         }
 
         let result;
+        let steps;
 
         // Choose algorithm
         if (algorithmSelect.value === "merge") {
             result = Sorting.mergeSort(arr);
+            steps = Sorting.mergeSortSteps(arr);
         } else if (algorithmSelect.value === "quick") {
             result = Sorting.quickSort(arr);
+            steps = Sorting.quickSortSteps(arr);
         } else if (algorithmSelect.value === "bubble") {
             result = Sorting.bubbleSort(arr);
+            steps = Sorting.bubbleSortSteps(arr);
         }
 
         // Show the result
