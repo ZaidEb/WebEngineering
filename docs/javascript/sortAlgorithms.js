@@ -426,6 +426,23 @@ function initSortingUI() {
 
         // Show the result
         sortOutput.textContent = result.join(" ");
+
+        // Setup visualization
+        stopVisualization();
+        visualizationState.steps = steps;
+        visualizationState.currentStep = 0;
+        visualizationState.originalArray = [...arr];
+        
+        visualizationContainer.style.display = "block";
+        renderStep(0);
+    });
+
+    // Play button
+    playBtn.addEventListener("click", function() {
+        if (!visualizationState.isPlaying && visualizationState.steps.length > 0) {
+            visualizationState.isPlaying = true;
+            playVisualization();
+        }
     });
 }
 
