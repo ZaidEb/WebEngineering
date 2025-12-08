@@ -352,6 +352,16 @@ class Sorting {
 // Connect Sorting class with HTML user interface
 // ---------------------------------------------
 
+// Visualization state
+let visualizationState = {
+    steps: [],
+    currentStep: 0,
+    isPlaying: false,
+    intervalId: null,
+    speed: 500,
+    originalArray: []
+};
+
 function initSortingUI() {
     const numbersInput = document.getElementById("numbersInput");
     const algorithmSelect = document.getElementById("algorithmSelect");
