@@ -367,7 +367,25 @@ function initSortingUI() {
     const algorithmSelect = document.getElementById("algorithmSelect");
     const sortOutput = document.getElementById("sortOutput");
     const sortBtn = document.getElementById("sortBtn");
+    
+    // Visualization elements
+    const visualizationContainer = document.getElementById("visualizationContainer");
+    const barsContainer = document.getElementById("barsContainer");
+    const stepInfo = document.getElementById("stepInfo");
+    const playBtn = document.getElementById("playBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+    const stepBtn = document.getElementById("stepBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const speedSlider = document.getElementById("speedSlider");
+    const speedValue = document.getElementById("speedValue");
 
+    // Speed slider
+    speedSlider.addEventListener("input", function() {
+        visualizationState.speed = 1600 - parseInt(speedSlider.value);
+        speedValue.textContent = speedSlider.value + "ms";
+    });
+
+    // Main sort button
     sortBtn.addEventListener("click", function () {
 
         // Convert input text to number array
