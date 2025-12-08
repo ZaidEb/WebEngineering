@@ -387,11 +387,11 @@ function initSortingUI() {
 
     // Main sort button
     sortBtn.addEventListener("click", function () {
-
         // Convert input text to number array
         let raw = numbersInput.value.trim();
         if (raw === "") {
             sortOutput.textContent = "Please enter some numbers!";
+            visualizationContainer.style.display = "none";
             return;
         }
 
