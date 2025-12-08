@@ -289,30 +289,57 @@
 <!-- JS: External code: -->
 <script src="javascript/HexbinaryConvert.js"></script>
 
-
-<!-- Rekursion -->
+<!-- Rekursion Section -->
 
 <div class="tablet">
     <h2 style="color: #2196F3; text-align: center;">Rekursion</h2>
+    <p style="text-align: center; color: #555;">Draws a circle, then calls itself twice to draw 2 smaller circles below.</p>
     <hr>
 
-    <p>Enter 4 number:</p>
+    <p>Enter size (e.g. 200):</p>
 
     <input class="text-input"
            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-           type="text" id="rekursionInput" placeholder="Enter Number">
+           type="text" id="rekursionInput" placeholder="e.g. 200">
 
     <br><br>
 
-    <p>Rekursion output</p>
-    <div id="rekursionOutput" style="
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #bbb;
-        border-radius: 5px;
-        background-color: #f7f7f7;
-        font-family: Consolas, monospace;">
-        -
+    <button id="rekBtn" style="padding: 8px 16px; border-radius: 5px; border: none; background-color: #4CAF50; color: white;">
+        Start
+    </button>
+
+    <br><br>
+
+    <p>Rekursion output:</p>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <canvas id="rekursionCanvas" width="400" height="300" style="
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            background-color: #f7f7f7;">
+        </canvas>
+        <pre style="
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 13px;
+            overflow: auto;
+            max-width: 400px;
+"><code>function drawCircles(left, top, size) {
+  if (size > 10) {
+    // Draw circle
+    ctx.beginPath();
+    ctx.arc(left+size/2, top+size/2, size/2, 0, Math.PI*2);
+    ctx.stroke();
+    
+    // Recursion
+    let s = size / 2;
+    let newTop = top + s / 2;
+    
+    drawCircles(left, newTop, s);
+    drawCircles(left + s, newTop, s);
+  }
+}</code></pre>
     </div>
 </div>
 
