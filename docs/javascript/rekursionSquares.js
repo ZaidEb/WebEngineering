@@ -45,3 +45,5 @@ sqBtn.addEventListener("click", function() {
     let top = (sqCanvas.height - size) / 2;
     drawSquares(left, top, size);
 });
+
+
