@@ -1,9 +1,9 @@
-// -----------------------------
+
 // Sorting class with step tracking for visualization
-// -----------------------------
+
 class Sorting {
 
-    // Quick Sort (basic version for result)
+    // Quick Sort
     static quickSort(arr) {
         if (arr.length <= 1) return arr;
 
@@ -19,7 +19,7 @@ class Sorting {
         return [...Sorting.quickSort(left), pivot, ...Sorting.quickSort(right)];
     }
 
-    // Merge Sort (basic version for result)
+    // Merge Sort
     static mergeSort(arr) {
         if (arr.length <= 1) return arr;
 
@@ -45,7 +45,7 @@ class Sorting {
         return result.concat(left.slice(i)).concat(right.slice(j));
     }
 
-    // Bubble Sort (basic version for result)
+    // Bubble Sort
     static bubbleSort(arr) {
         let array = [...arr];
         let n = array.length;
@@ -63,7 +63,7 @@ class Sorting {
         return array;
     }
 
-    // ========== VISUALIZATION VERSIONS ==========
+    // ==== VISUALIZATION VERSIONS
 
     // Bubble Sort with steps
     static bubbleSortSteps(arr) {
@@ -134,7 +134,7 @@ class Sorting {
         return steps;
     }
 
-    // Quick Sort with steps (in-place version for visualization)
+    // Quick Sort with steps
     static quickSortSteps(arr) {
         let array = [...arr];
         let steps = [];
@@ -265,7 +265,7 @@ class Sorting {
             message: "Starting Merge Sort - we divide and merge"
         });
 
-        // Iterative merge sort for better visualization
+        // Iterative merge sort
         for (let size = 1; size < n; size *= 2) {
             for (let leftStart = 0; leftStart < n - 1; leftStart += 2 * size) {
                 let mid = Math.min(leftStart + size - 1, n - 1);
@@ -348,9 +348,9 @@ class Sorting {
     }
 }
 
-// ---------------------------------------------
+
 // Connect Sorting class with HTML user interface
-// ---------------------------------------------
+
 
 // Visualization state
 let visualizationState = {

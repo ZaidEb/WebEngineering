@@ -5,7 +5,7 @@ const rekCanvas = document.getElementById("rekursionCanvas");
 const rekBtn = document.getElementById("rekBtn");
 const ctx = rekCanvas.getContext("2d");
 
-// Draw circles with recursion (like Java code)
+// Draw circles with recursion
 function drawCircles(left, top, size) {
     if (size > 10) {
         // Draw circle
